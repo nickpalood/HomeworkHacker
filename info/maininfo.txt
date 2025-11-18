@@ -1,0 +1,103 @@
+Project info and instructions
+
+First steps project:
+
+    Read the course overview pdf in Brightspace, which gives you a clean outline of the project and the three phases.
+    Make a group of 4 people and enroll in Brightspace (ASAP).
+    Come up with a topic for a small study involving design and evaluation of an application/research question involving a multimodal dialogue with either a) NAO/Alpha mini humanoid robot b) minimally embodied agent, c) virtual agent.
+    Remember that you must use an LLM to support your verbal interaction through prompting, and, at least one additional modality in this project.
+    Download the project proposal template from Brightspace (link below).
+
+Generic paper template for a project paper and proposal: /content/enforced/309804-4032DSHAIY_2425_S1/Paper Template.doc
+
+For the project proposal, you should complete everything from the template up to and including 4.4. Please take care that your proposal proposes to study a particular small research question about the usability/feasibility/perception of an interaction, or variations of interactions between a human and a SIA. Do not focus on a hypothesis testing study for which you need many participants for statistical analysis of effects. The proposal may not be longer than 3 pages in this format including everything. You may also use latex but you need to stick to the same layout etc....
+
+Examples of good project proposals (these are examples, its not about copying there topics...)
+
+https://docs.google.com/document/d/1sxgzV2Pn_Q94kbxNQjmXcFhtiPsGFQrfPTKANzZtebI/edit?usp=sharing
+
+https://docs.google.com/document/d/1fpJdw0SaE-fBkS0SxEPQo6m8fB3B1DAL6ImW44XGLFE/edit?usp=sharing
+
+--------------------
+
+Important info on content of your proposal
+
+Is is good to realize that also a hypothesis testing HRI study involves two phases. A pilot and an experiment. In the pilot (phase 1) you develop the interaction(s), you evaluate them in terms of robustness, usability, and user perception. This ends with an analysis of the design and a better design based on your findings. Then (phase 2) you can do a hypothesis testing study for effects (e.g. the math performance of children). However, for the course this last phase is NOT recommended or needed. 
+
+Example study:
+
+The effect of supportive gestures of a NAO on math learning gain of children.
+
+Phase 1: The design of two conditions, one where the robot randomly gestures, one where the robot gestures in line with the math explanation. The question here could be how to develop supportive behaviors for a NAO robot that explains math to children. The outcome is a set of behaviors and interactions of which children believe it helps, they understand this when asked to explain why the robot performs a particular behavior, design recommendations from teachers and children, etc... you name it, everything that helps to get a great HRI scenario.
+
+Phase 2: An experiment in which the random and the support NAO are used in interaction with children (between subject, 30 p in each subject) in a one-on-one setting, where children are measured on their math gain using a pre and post measurement on a standard math test. 
+
+So you see, there is loads of stuff to learn and find out in phase one! 
+
+-------------------------------
+
+Information on the Interaction Design 
+
+Interaction flow(s) diagrams and dialogue flows (boxes and arrows, see example below)
+Explanation of the interactions, including modalities, affordances
+Explanation of design method
+Detail: enough to understand the application/interaction
+2 pages max in the template.
+
+Example diagrams:
+
+Conversational Triggers Flow Chart | Download Scientific Diagram
+
+Proposed flowchart of the systems | Download Scientific Diagram
+
+-----------------------
+
+Intermediate plenary progress presentations
+
+Half way the project (Nov 20), all groups give a progress presentation of 5-10 minutes in total. This is plenary (so all groups are there) and you will get feedback and ideas from this. More details about this this wil follow shortly.
+
+Instructions for final presentations in the week of 15 december.
+
+Monday 15 Dec 14:00-17:30
+
+Wednesday 17 dec 12:00-15:00
+
+Thursday 18 dec 13:00-16:30
+
+In this google sheet you can schedule your presentation (slots of 15 minutes).
+
+(link shared later)
+
+The final presentation is
+
+    A 1-2 minute elevator pitch (no slides) containing:
+        The research question ("In this project, we investigated ....")
+        The design and evaluation approach ("We used a .... design approach, in which we asked users to ...., we evaluated our design by ....")
+        The results and the conclusion ("The results, consisting of .... measures of ...., show that ....... This indicates that .....")
+    A live demo of your interaction (5 minutes). I or a TA will play the role of the user.
+    Then I and the TAs will ask you some critical questions about the design/pilot/result/eval (5 minutes).
+
+You agent / application must be ready to run at the start of the presentation. If it is not, you need to reschedule the presentation as there is no time to debug on the spot.
+
+--------------------------
+
+Instructions on the final paper
+
+Your paper should follow the paper template (above). It should describe the final state of your research (so you should take into account changes you made to the proposal, the final resulting interaction design if that was an outcome of your study, etc..). The length is 8 pages including graphs and figures but excluding references (so your refs do not count in the total number of 8 pages, you may use as many refs as you need). You may use word or latex. You may not change the layout unless critical for your study. You may not significantly change paper size, font size, margins etc. to cheat on the size. 
+
+---------------------------
+
+Final grading aspects for the paper
+Paper assessment:
+1. The research question is suitable and based on literature (related work, reasoning, clearly defined, pilot study)
+2. The design method is clear and appropriate (clarity, suitability)?
+3. The interaction design is well-argued and explained (interaction design, multimodality)
+4. The data analysis is correct (appropriate method, well-explained)
+5. The conclusion is sound (follows from results, is critical and appropriate)
+6. Overall presentation of the final paper (language, structure, layout).
+---------------------
+Examples of good papers.
+
+/content/enforced/309804-4032DSHAIY_2425_S1/HRI paper good example 1.pdf
+
+/content/enforced/309804-4032DSHAIY_2425_S1/HRI paper good example 2.pdf
