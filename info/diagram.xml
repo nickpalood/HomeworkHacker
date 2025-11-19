@@ -56,10 +56,10 @@
           <mxGeometry x="334" y="1420" width="160" height="70" as="geometry" />
         </mxCell>
         <mxCell id="14" value="SARCASTIC prompt&#xa;&quot;You are a witty,&#xa;sarcastic study&#xa;companion...&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
-          <mxGeometry x="180" y="1530" width="160" height="80" as="geometry" />
+          <mxGeometry x="230" y="1530" width="160" height="80" as="geometry" />
         </mxCell>
         <mxCell id="15" value="NEUTRAL prompt&#xa;&quot;You are a&#xa;supportive,&#xa;direct study&#xa;companion...&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
-          <mxGeometry x="488" y="1530" width="160" height="80" as="geometry" />
+          <mxGeometry x="450" y="1530" width="160" height="80" as="geometry" />
         </mxCell>
         <mxCell id="16" value="LLM generates&#xa;response text" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="334" y="1650" width="160" height="60" as="geometry" />
