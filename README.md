@@ -46,14 +46,46 @@ npm run build
 ```
 This creates an optimized version of the app in the `dist` folder.
 
-## Features
+## Technologies Used
 
-- 🎤 Voice commands with "Hey Buddy" wake word
-- 🤖 AI-powered study assistance
-- 📱 Phone detection to help you stay focused
-- 🎨 Choose between neutral and sarcastic personality modes
-- 🖥️ Screen capture for analyzing your work
-- 🔊 Text-to-speech responses
+### Frontend
+- React 18 - UI library for building interactive components
+- TypeScript - Superset of JavaScript with static typing
+- Vite - Fast build tool and development server
+- Tailwind CSS - Utility-first CSS framework for styling
+- shadcn/ui - Accessible React components built on Radix UI primitives
+- Radix UI - Headless UI component library for accessibility
+- React Hook Form - Efficient form state management
+- React Query - Server state management and data fetching
+- React Router - Client-side routing
+- Zod - TypeScript-first schema validation
+- Lucide React - Icon library
+- Recharts - Data visualization library
+- Sonner - Toast notification system
+- Google Generative AI SDK - Integration with Gemini API
+- Web Speech API - Native browser speech recognition and synthesis
+
+### Backend
+- Python - Core programming language
+- FastAPI - Modern web framework for building APIs
+- Uvicorn - ASGI server for running FastAPI
+- PyTorch - Deep learning framework
+- YOLOv5 - Object detection model for phone detection
+- Pillow - Image processing library
+- Python-multipart - Multipart request parsing
+- OpenCV - Computer vision library
+- python-dotenv - Environment variable management
+- Requests - HTTP client library
+
+### Development Tools
+- Node.js - JavaScript runtime
+- npm - Package manager
+- ESLint - Code linting
+- TypeScript ESLint - TypeScript linting
+- Concurrently - Run multiple processes in parallel
+- PostCSS - CSS processing tool
+- Autoprefixer - Vendor prefix automation
+- SWC - Fast JavaScript/TypeScript compiler
 
 ## Troubleshooting
 
@@ -61,4 +93,4 @@ This creates an optimized version of the app in the `dist` folder.
 - **Port already in use?** The dev server will try to use a different port automatically
 - **Backend not connecting?** Make sure the Python server is running on the expected port
 
-That's it! You're ready to hack your homework. Good luck! 💪
+Done! You're ready to hack your homework. Good luck!
