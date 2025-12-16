@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Define light theme vars if needed, but we focus on dark */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 310 90% 65%;
+    --primary-foreground: 355 92% 95%;
+    --secondary: 180 70% 45%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 190 100% 50%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 310 90% 65%;
+    --radius: 1rem;
+  }
+
+  .dark {
+    /* Aurora Borealis Theme V3 */
+    --background: 255 30% 8%;
+    --foreground: 190 20% 95%;
+
+    --card: 255 30% 12%;
+    --card-foreground: 190 20% 95%;
+
+    --popover: 255 30% 10%;
+    --popover-foreground: 190 20% 95%;
+
+    /* New Orange/Coral */
+    --primary: 14 92% 65%;
+    --primary-foreground: 14 92% 98%;
+
+    /* Deep Cyan/Teal - Kept for variety */
+    --secondary: 180 70% 45%;
+    --secondary-foreground: 180 70% 95%;
+
+    --muted: 255 20% 18%;
+    --muted-foreground: 190 15% 60%;
+
+    /* New Desaturated Purple/Indigo */
+    --accent: 245 23% 50%;
+    --accent-foreground: 245 23% 95%;
+    
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 255 30% 20%;
+    --input: 255 30% 16%;
+    --ring: 14 92% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    /* Add a subtle gradient to the whole page background */
+    background: radial-gradient(circle at top right, hsl(var(--primary) / 0.1), transparent 40%),
+                radial-gradient(circle at bottom left, hsl(var(--accent) / 0.1), transparent 50%),
+                hsl(var(--background));
+  }
+}
+
+@layer utilities {
+  /* Glassmorphism Card Style */
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-md border border-white/10 shadow-2xl shadow-black/20;
+  }
+
+  /* Glow Effects */
+  .aurora-glow-primary {
+    box-shadow: 0 0 12px 1px hsl(var(--primary) / 0.7),
+                0 0 24px 4px hsl(var(--primary) / 0.4);
+  }
+  .aurora-glow-accent {
+    box-shadow: 0 0 12px 1px hsl(var(--accent) / 0.7),
+                0 0 24px 4px hsl(var(--accent) / 0.4);
+  }
+
+  /* Pulse animation with new colors */
+  .pulse-ring {
+    animation: pulse-ring 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse-ring {
+    0%, 100% {
+      box-shadow: 0 0 0 0 hsl(var(--primary) / 0.5);
+    }
+    70% {
+      box-shadow: 0 0 0 25px hsl(var(--primary) / 0);
+    }
+  }
+
+  .fade-in {
+    animation: fade-in 0.4s ease-out;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

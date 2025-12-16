@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+python-multipart
+pillow
+torch
+# Note: ultralytics/yolov5 model will be loaded via torch.hub.
+## To run on CPU, you don't need CUDA.
+## If you have a GPU, install appropriate PyTorch build.
