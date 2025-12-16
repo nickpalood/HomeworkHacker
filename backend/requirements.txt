@@ -2,7 +2,11 @@ fastapi
 uvicorn
 python-multipart
 pillow
+opencv-python
 torch
+requests
+python-dotenv
+
 # Note: ultralytics/yolov5 model will be loaded via torch.hub.
-## To run on CPU, you don't need CUDA.
-## If you have a GPU, install appropriate PyTorch build.
+# To run on CPU, you don't need CUDA.
+# If you have a GPU, install appropriate PyTorch build.

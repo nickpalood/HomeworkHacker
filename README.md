@@ -28,19 +28,19 @@ Make sure you have:
    ```
    You'll need to get API keys from Google and other services the app uses.
 
-4. **Start the development server**:
-   ```bash
-   npm run dev
-   ```
-   This starts the app and you should see a local URL (usually `http://localhost:5173`). Open that in your browser.
-
-5. **Start the Python backend** (in a separate terminal):
+4. **Install Python dependencies** for the backend:
    ```bash
    cd backend
    pip install -r requirements.txt
-   python app.py
+   cd ..
    ```
-   The backend handles some of the heavy lifting for AI features.
+   This installs the packages needed for the AI features.
+
+5. **Start the development server** (both frontend and backend):
+   ```bash
+   npm run dev
+   ```
+   This starts everything at once - the React frontend at `http://localhost:5173` and the Python backend at `http://localhost:8000`. Open the frontend URL in your browser and you're good to go!
 
 ### Build for Production
 
