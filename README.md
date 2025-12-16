@@ -86,12 +86,8 @@ This creates an optimized version of the app in the `dist` folder.
 ### Development Tools
 - Node.js - JavaScript runtime environment
 - npm - Dependency management
-- ESLint - Code quality enforcement
-- TypeScript ESLint - Type-aware linting
-- Concurrently - Parallel process execution
-- PostCSS - CSS transformation pipeline
-- Autoprefixer - Browser compatibility prefixes
-- SWC - Rust-based fast compilation
+- Vite - Build tool with React plugin support
+- Tailwind CSS - Styling with PostCSS integration
 
 ## Troubleshooting
 
