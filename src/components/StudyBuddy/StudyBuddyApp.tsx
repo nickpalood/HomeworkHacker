@@ -21,12 +21,21 @@ import PhoneDetector from "../PhoneDetection"; // Import PhoneDetector
 export function HomeworkHackerApp() {
   const [showWakeWordUI, setShowWakeWordUI] = useState(true);
   const [showSettingsModal, setShowSettingsModal] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(() => {
+    // Initialize from localStorage
+    const saved = localStorage.getItem("isMuted");
+    return saved ? JSON.parse(saved) : false;
+  });
   const [isTextInputActive, setIsTextInputActive] = useState(false);
   const [debugMode, setDebugMode] = useState(() => {
     // Initialize from localStorage
     const saved = localStorage.getItem("debugMode");
     return saved ? JSON.parse(saved) : false;
+  });
+  const [personality, setPersonalityState] = useState<"neutral" | "sarcastic">(() => {
+    // Initialize from localStorage
+    const saved = localStorage.getItem("personality");
+    return (saved as "neutral" | "sarcastic") || "neutral";
   });
   const lastSpokenMessageIdRef = useRef<string | null>(null);
   const lastMutedMessageIdRef = useRef<string | null>(null); // Track messages skipped due to mute
@@ -48,6 +57,16 @@ export function HomeworkHackerApp() {
   useEffect(() => {
     localStorage.setItem("debugMode", JSON.stringify(debugMode));
   }, [debugMode]);
+
+  // Save mute state to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("isMuted", JSON.stringify(isMuted));
+  }, [isMuted]);
+
+  // Save personality to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("personality", personality);
+  }, [personality]);
   
   // Load settings
   const { settings, isLoaded, updateUserName, updateVoiceSpeed, updateVolume, resetSettings } = useSettings();
@@ -55,13 +74,19 @@ export function HomeworkHackerApp() {
   const {
     messages,
     isLoading,
-    personality,
-    setPersonality,
+    personality: aiPersonality,
+    setPersonality: setAiPersonality,
     sendMessage,
     sendAIPromptWithoutUserMessage,
     sendMockMessage,
     clearMessages,
-  } = useHomeworkHacker({ personality: "neutral", userName: settings.userName });
+  } = useHomeworkHacker({ personality: personality, userName: settings.userName });
+
+  // Sync personality state with AI hook
+  const handlePersonalityChange = (newPersonality: "neutral" | "sarcastic") => {
+    setPersonalityState(newPersonality);
+    setAiPersonality(newPersonality);
+  };
 
   const { isSpeaking, speak, stop: stopSpeaking } = useSpeechSynthesis(settings.volume);
 
@@ -374,7 +399,7 @@ export function HomeworkHackerApp() {
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <PersonalityToggle personality={personality} onToggle={setPersonality} />
+            <PersonalityToggle personality={personality} onToggle={handlePersonalityChange} />
             <Button
               variant="ghost"
               size="icon"
